@@ -1,0 +1,13 @@
+:root {
+	--background: #d6d6d6;
+	--foreground: black;
+	
+	--font-family: 'Inconsolata', monospace;
+	--font-size-regular: 20px;
+	--font-size-medium: 40px;
+	--font-size-big: 48px;
+	--font-size-mega: 64px;
+
+	--width-component: 90%;
+	--padding-small: 2%;
+}
