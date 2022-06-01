@@ -1,5 +1,4 @@
 import event from './modules/event';
-import todos from './modules/todos';
 
 export default {
 	state() {
@@ -15,7 +14,6 @@ export default {
 	},
 
 	modules: {
-		event,
-		todos
+		event
 	}
 };
