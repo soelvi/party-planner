@@ -57,11 +57,6 @@ img {
 	object-fit: cover;
 }
 
-/* entire container, keeps perspective/3D effect */
-.menu__flip-container {
-	perspective: 1000px;
-}
-
 /* flip the card when hovered */
 .menu__flip-container:hover .menu__flipper, .menu__flip-container.hover .menu__flipper {
 	transform: rotateY(180deg);
