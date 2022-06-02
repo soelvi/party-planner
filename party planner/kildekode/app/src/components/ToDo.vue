@@ -3,9 +3,9 @@
 		<h3 class="toDo__title">To-do list</h3>
 
 		<div class="toDo__tasks">
-			<div v-if="!isEditing" >
+			<div v-if="!isEditing">
 				<input type="text" v-model="todo" class="toDo__border" placeholder="Write here..">
-				<input type="submit" value="add" @click="storeTodo"> 
+				<input type="submit" value="add" alt="add task to to-do list" @click="storeTodo"> 
 			</div>	
 
 			<div v-else class="toDo__input">
@@ -19,7 +19,7 @@
 						<input type="checkbox" v-if="!isChecked" @click="isChecked"  class="finished__toDo">
 						<label> {{ todo }} </label>
 					</span>
-					<!-- <img src="/public/images/edit.png" alt="edit button"> -->
+
 					<span>
 						<button @click="editTodo(index, todo)" class="toDo__buttonImage"> <img src="/public/images/edit.png" alt="edit button"> </button> 
 						<button @click="deleteTodo(index)" class="toDo__buttonImage"> <img src="/public/images/delete.png" alt="delete button"> </button>
@@ -43,11 +43,13 @@ export default {
 	},
 
 	methods: {
+		// push todo task into todos array
 		storeTodo() {
 			this.todos.push(this.todo)
 			this.todo = ''
 		},
 
+		// selectedIndex chooses todo task and its possible to edit 
 		editTodo(index, todo) {
 			this.todo = todo 
 			this.selectedIndex = index

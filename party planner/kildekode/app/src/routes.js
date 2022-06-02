@@ -10,7 +10,7 @@ export default [
 	},
 	{ 
 		name: 'invitations', 
-		path: '/:slug/invitations/',  //dynamic routes start with: and fetches the chosen event 
+		path: '/:slug/invitations/',  //:dynamic routes start with: and fetches the chosen event 
 		component: Invitations
 	},
 	{ 

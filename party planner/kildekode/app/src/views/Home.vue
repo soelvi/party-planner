@@ -5,7 +5,6 @@
 		<div class="dashboard__title">
 			<Title />
 		</div>
-	
 
 		<div class="dashboard__components"> 
 			<DateTime />
@@ -49,10 +48,6 @@
 			await this.sanityFetch(query, { 
 				documentType: 'project' 
 			});
-
-			// this.metaTags({
-			// 	title: 'Hello from Home.vue',
-			// })
 		}
 	}
 </script>
@@ -62,8 +57,6 @@
 .dashboard {
 	background-color: white;
 	border-style: solid;
-	/* border-right-style: solid;
-	border-left-style: solid; */
 	width: 90%;
 	margin-left: 5%;
 }
@@ -79,7 +72,6 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-content: space-evenly;
-
 	/* grid-template-columns: masonry; */
 }
 

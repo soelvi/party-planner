@@ -14,7 +14,6 @@ export default {
 		getDateTime(state) {
 			return state.time;
 		}
-		
 	},
 
 	mutations: {

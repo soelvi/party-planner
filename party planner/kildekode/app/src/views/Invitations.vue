@@ -1,53 +1,52 @@
 <template>
 	<div class="invitation">
 		<section class="header">
-				<h2 class="header__title">
-					{{ pageTitle }}
-				</h2>
+			<h2 class="header__title">
+				{{ pageTitle }}
+			</h2>
 		</section>
 		<router-link to="/">til /overview</router-link>
 
 		<div v-if="loading">Loading invitation...</div>
 		<div v-else class="invitation__event">
 			
-				<h2> {{ result.eventTitle }} </h2>
+			<h2> {{ result.eventTitle }} </h2>
 
-				<img :src="result.eventImage.asset.url" alt="" class="invitation__image">
+			<img :src="result.eventImage.asset.url" alt="" class="invitation__image">
 
-				<h3> description: </h3> 
-				<div> {{ result.description }} </div>
+			<h3> description: </h3> 
+			<div> {{ result.description }} </div>
 
-				<h3> date: </h3> 
-				<div> {{ result.time }} </div>
+			<h3> date: </h3> 
+			<div> {{ result.date }} </div>
 
-				<h3> time: </h3> 
-				<div> {{ result.time }} </div>
+			<h3> time: </h3> 
+			<div> {{ result.time }} </div>
 
-				<h3> location:  </h3> 
-				<div> {{ result.location }} </div>
+			<h3> location:  </h3> 
+			<div> {{ result.location }} </div>
 
-				<h3> dresscode:  </h3> 
-				<div> {{ result.dresscode[0].dresscode }} </div>
+			<h3> dresscode:  </h3> 
+			<div> {{ result.dresscode[0].dresscode }} </div>
 
-				<h3> menu: </h3> 
-				<div> {{ result.menu }} </div>
-			
+			<h3> menu: </h3> 
+			<div> {{ result.menu }} </div>
 		
-				<h3> RSVP </h3>
-				<div> {{ count }} guest attending </div>
+			<h3> RSVP </h3>
+			<div> {{ count }} guest attending </div>
 
-				<div>
-					<button class="counter__button" @click="increase">
-						<img src="/public/images/accept.png" alt="accept invitation">
-					</button>
-					<button class="counter__button" @click="greet">
-						<img src="/public/images/decline.png" alt="decline invitation">
-					</button>
-				</div>
+			<div>
+				<button class="counter__button" @click="increase">
+					<img src="/public/images/accept.png" alt="accept invitation">
+				</button>
+				<button class="counter__button" @click="greet">
+					<img src="/public/images/decline.png" alt="decline invitation">
+				</button>
+			</div>
 
-				<section class="invitation__location">
-					<Location />
-				</section>
+			<section class="invitation__location">
+				<Location />
+			</section>
 		</div>
 	</div>
 </template>
@@ -92,13 +91,8 @@ export default {
 		},
 
 		// decline button will show a message and do nothing with guest number
-		greet(event) {
-			// `this` inside methods points to the current active instance
+		greet() {
 			alert(`${this.message}`)
-			// `event` is the native DOM event
-			// if (event) {
-			// 	alert(event.target.tagName)
-			// }
 		}
 	},
 }
@@ -138,7 +132,6 @@ padding-top: 2%;
 .invitation__image {
 	height: 350px;
 	object-fit: contain;
-	
 }
 
 .invitation__location {

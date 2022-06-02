@@ -35,7 +35,6 @@ export default {
 .guestlist {
 	margin: 2%; 
 	padding: 1%;
-	/* background-color: orange; */
 	width: var(--width-component);
 	height: 500px; 
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -47,16 +46,11 @@ export default {
 }
 
 .guestlist__column {
-	border-bottom: solid black 1px;
 	padding-top: 2%;
 	padding-left: 2%;
-	width: 45%;
-	background-color: orange;
+	width: 100%;
 	/* display: grid;
 	grid-template-columns: 1fr 1fr; */
 }
 
 </style>
-
-
-// https://homepage.net/name_generator/

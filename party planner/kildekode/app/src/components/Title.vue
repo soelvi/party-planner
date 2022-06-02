@@ -44,5 +44,4 @@ export default {
 		font-size: var(--font-size-small);
 	}
 }
-
 </style>

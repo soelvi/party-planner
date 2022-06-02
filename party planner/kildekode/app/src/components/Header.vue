@@ -2,14 +2,15 @@
 	<div v-if="loading">...</div>
 	
 	<section v-else class="header">	
-			<h2 class="header__title">
-				{{ title }} 
-			</h2>	
+		<h2 class="header__title">
+			{{ title }} 
+		</h2>	
 
-			<ul class="header__countdown">
-				<Countdown />
-			</ul>
+		<ul class="header__countdown">
+			<Countdown />
+		</ul>
 	</section>
+
 	<router-link to="/"> back to /overview </router-link>
 </template>
 
@@ -43,17 +44,15 @@ export default {
 			type: String
 		}
 	},
-
-	methods: {
-		
-	}
 }
 </script>
 
 <style>
+
 li {
 	list-style: none;
 }
+
 .header {
 	margin-top: 30px;
 	padding: 20px;
@@ -64,8 +63,7 @@ li {
 	text-align: center;
 }
 
-
-/* må ha null mellomrom mellom title og curly? why */
+/* no space between name and curly? why? */
 .header__title{
 	font-size: var(--font-size-big);
 	text-align: center;	
@@ -86,13 +84,11 @@ li {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
+	}
 
-.header__title-mega {
-	font-size: var(--font-size-medium);
+	.header__title-mega {
+		font-size: var(--font-size-medium);
+	}
 }
-
-}
-
 </style>
 

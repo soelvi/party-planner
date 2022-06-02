@@ -3,7 +3,10 @@
 		<h3> Date / Time </h3>
 
 		<div v-if="loading">...</div>
-		<div v-else>{{ result.time }}</div>
+		<div v-else>
+			{{ result.date }} <br>
+			{{ result.time }}
+		</div>
 		
 	</section>
 </template>
@@ -27,20 +30,6 @@ export default {
 			type: String
 		}
 	},
-
-	computed: {
-		// apiDateTime() {
-		// 	return this.$store.getters.getDateTime;
-		// }
-	},
-
-	methods: {
-		formatDate(time){
-			const timeString = new Date(time).getTime();
-			console.log(timeString)
-		}
-	},
-	
 }
 </script>
 
@@ -48,7 +37,6 @@ export default {
 .datetime {
 	margin: 2%; 
 	padding: 1%;
-	/* background-color: orange; */
 	width: var(--width-component);
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 	text-align: center;
@@ -57,5 +45,4 @@ export default {
 .datetime_text {
 	background-color: orangered;
 }
-
 </style>

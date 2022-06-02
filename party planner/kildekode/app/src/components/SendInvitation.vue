@@ -49,8 +49,7 @@ export default {
 /* 600px -- mobile */
 @media screen and (max-width: 600px) {
 	.invitations__button {
-	font-size: var(--font-size-small);
+		font-size: var(--font-size-small);
+	}
 }
-}
-
 </style>

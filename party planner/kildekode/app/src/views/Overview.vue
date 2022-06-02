@@ -5,17 +5,15 @@
 				ALL EVENTS
 			</h2>
 		</section>
-	
-		<!-- an overview navigation of all events goes here  -->
 
 		<div v-if="loading"> Loading all events...</div>
 		<div v-else>
 			<section class="overview__allEvents">
 				<ul v-for="event, index in result" class="event" :key="event._id">
-				<router-link :to="{ name: 'home', params: { slug: event.slug.current } }">
-					<img :src="result[index].eventImage.asset.url" alt="event" class="overview__event-image">
-					<p class="overview__event-title"> {{result[index].eventTitle}} </p>
-				</router-link>
+					<router-link :to="{ name: 'home', params: { slug: event.slug.current } }">
+						<img :src="result[index].eventImage.asset.url" alt="event" class="overview__event-image">
+						<p class="overview__event-title"> {{result[index].eventTitle}} </p>
+					</router-link>
 				</ul>
 			</section>
 		</div>
@@ -58,7 +56,6 @@ export default {
 }
 
 .overview__allEvents {
-	/* width: 60%; */
 	padding: 1%;
 	text-align: center;
 	display: grid;

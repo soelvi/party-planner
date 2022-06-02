@@ -1,17 +1,7 @@
 <template>
-	<!-- <Header/> -->
-	<!-- fullPath forces to go to page -->
 	<RouterView :key="$route.fullPath" /> 
-	<!-- <router-view :key="$route.fullPath"> </router-view> -->
+	<!-- fullpath forces to route to path -->
 </template>
-
-<script>
-	// import Header from '../components/Header.vue';
-	
-	// export default {
-	// 	components: { Header }
-	// }
-</script>
 
 <style>
 	@import '../style/reset.css';

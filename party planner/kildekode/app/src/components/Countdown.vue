@@ -9,31 +9,7 @@
 </template>
 
 <script>
-import query from '../groq/projectPage.groq?raw';
-import sanityMixins from '../mixins/viewMixin';
-
-export default {
-	
-	mixins: [sanityMixins],
-
-	async created() {
-		await this.sanityFetch(query, {
-			slug: this.$route.params.slug
-		});
-	},
-
-	props: {
-		slug: {
-			type: String
-		}
-	},
-
-	methods: {
-		
-	}
-}
 </script>
 
 <style>
-
 </style>

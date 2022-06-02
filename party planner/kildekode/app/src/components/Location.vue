@@ -87,7 +87,6 @@ img {
 
 /* 600px -- mobile */
 @media screen and (max-width: 600px) {
-
 	.flip-container, .front, .back {
 		width: 100%;
 		height: 300px;
